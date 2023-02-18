@@ -1,2 +1,2 @@
-# EssentialApp
+# EssentialFeed
 Swift  EssentialApp
