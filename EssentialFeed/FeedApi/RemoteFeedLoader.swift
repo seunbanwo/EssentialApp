@@ -32,6 +32,7 @@ public protocol HTTPClient {
 }
 
 public final class RemoteFeedLoader {
+    // `public` makes the class accessible from other modules
     // By making final you prevent subclassing
     private let url: URL
     private let client: HTTPClient
