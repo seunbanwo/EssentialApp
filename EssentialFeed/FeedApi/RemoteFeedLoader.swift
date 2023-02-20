@@ -10,7 +10,7 @@ import Foundation
 // By using the HTTPClientResult enum
 // we end up with only two representable paths.
 public enum HTTPClientResult {
-    case success(HTTPURLResponse)
+    case success(Data, HTTPURLResponse)
     case failure(Error)
 }
 
