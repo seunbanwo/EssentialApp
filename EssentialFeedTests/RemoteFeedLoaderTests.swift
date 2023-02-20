@@ -84,6 +84,21 @@ class RemoteFeedLoaderTests: XCTestCase {
         return (sut, client)
     }
     
+    // Spies are usually test-helpers with a
+    // single responsibility of capturing the received messages.
+    
+    // Stubs and Spies are test-doubles.
+    //
+    //    1. A Stub is used to set predefined behaviors or responses
+    // during tests. For example, you can create a Stub to provide
+    // "canned" HTTP responses (e.g., predefined JSON data or error).
+    //
+    //    2. A Spy collects or "records" usage information such as
+    // method invocation count and values received. So you can
+    // use/verify them later in the test.
+    //
+    //    A Spy is often also a Stub, as you can choose to
+    // set predefined actions/responses into it.
     private class HTTPClientSpy: HTTPClient {
         
         // Make your class a subclass of the abstract class
