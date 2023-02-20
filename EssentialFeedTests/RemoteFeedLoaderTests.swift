@@ -123,6 +123,10 @@ class RemoteFeedLoaderTests: XCTestCase {
         sut.load { capturedResults.append($0) }
         action()
         
+        //  It’s important to pass the file and line to the
+        //  XCTAssert... functions when they are called outside
+        //  the test method (e.g., in helper methods). This way,
+        //  Xcode can highlight precisely which test failed, and where.
         //Assert
         XCTAssertEqual(capturedResults, [result], file: file, line: line)
     }
@@ -131,6 +135,8 @@ class RemoteFeedLoaderTests: XCTestCase {
         // import FeedItem as testable or create initializer
         let item = FeedItem(id: id, description: description, location: location, imageURL: imageURL)
         
+        // Since Swift 5, you can use the compactMapValues
+        // method instead of reduce to remove nil values from a Dictionary
         let json = [
             "id": id.uuidString,
             "description": description,
