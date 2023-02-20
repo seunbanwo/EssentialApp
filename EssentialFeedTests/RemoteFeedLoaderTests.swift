@@ -84,54 +84,23 @@ class RemoteFeedLoaderTests: XCTestCase {
         //Arrange
         let (sut, client) = makeSUT()
 
-        // import FeedItem as testable or create initializer
-        let item1 = FeedItem(
-            id: UUID(),
-            description: nil,
-            location: nil,
-            imageURL: URL(string: "http://a-url.com")!
-        )
-        
-        let item1JSON = [
-            "id": item1.id.uuidString,
-            "image": item1.imageURL.absoluteString
-        ]
-        
-        let item2 = FeedItem(
+        let item1 = makeItem(id: UUID(), imageURL: URL(string: "http://a-url.com")!)
+        let item2 = makeItem(
             id: UUID(),
             description: "a description",
             location: "a loacation",
             imageURL: URL(string: "http://another-url.com")!
         )
         
-        let item2JSON = [
-            "id": item2.id.uuidString,
-            "description": item2.description,
-            "location": item2.location,
-            "image": item2.imageURL.absoluteString
-        ]
+        let items = [item1.model, item2.model]
         
-        let itemsJSON = [
-            "items": [item1JSON, item2JSON]
-        ]
-        
-        expect(sut, toCompleteWith: .success([item1, item2]), when: {
-            let json = try! JSONSerialization.data(withJSONObject: itemsJSON)
+        expect(sut, toCompleteWith: .success(items), when: {
+            let json = makeItemsJSON([item1.json, item2.json])
             client.complete(withStatusCode: 200, data: json)
         })
     }
     
     // MARK: - Helpers
-    
-    func expect(_ sut: RemoteFeedLoader, toCompleteWith result: RemoteFeedLoader.Result,  when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
-        //Act
-        var capturedResults = [RemoteFeedLoader.Result]()
-        sut.load { capturedResults.append($0) }
-        action()
-        
-        //Assert
-        XCTAssertEqual(capturedResults, [result], file: file, line: line)
-    }
     
     private func makeSUT(
         url: URL = URL(string: "https://a-url.com")!
@@ -145,6 +114,40 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         // return tuple
         return (sut, client)
+    }
+    
+    private func expect(_ sut: RemoteFeedLoader, toCompleteWith result: RemoteFeedLoader.Result,  when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+        //Act
+        var capturedResults = [RemoteFeedLoader.Result]()
+        sut.load { capturedResults.append($0) }
+        action()
+        
+        //Assert
+        XCTAssertEqual(capturedResults, [result], file: file, line: line)
+    }
+    
+    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedItem, json: [String: Any]) {
+        // import FeedItem as testable or create initializer
+        let item = FeedItem(id: id, description: description, location: location, imageURL: imageURL)
+        
+        let json = [
+            "id": id.uuidString,
+            "description": description,
+            "location": location,
+            "image": imageURL.absoluteString
+        ].reduce(into: [String: Any](), {(acc, e) in
+            // swift 5 use map
+            if let value = e.value {
+                acc[e.key] = value
+            }
+        })
+        
+        return (item, json)
+    }
+    
+    private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
+        let json = [ "items": items ]
+        return try! JSONSerialization.data(withJSONObject: json)
     }
     
     // Spies are usually test-helpers with a
