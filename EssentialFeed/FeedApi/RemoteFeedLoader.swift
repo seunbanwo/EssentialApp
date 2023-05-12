@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class RemoteFeedLoader {
+public final class RemoteFeedLoader: FeedLoader {
     // `public` makes the class accessible from other modules
     // By making final you prevent subclassing
     private let url: URL
