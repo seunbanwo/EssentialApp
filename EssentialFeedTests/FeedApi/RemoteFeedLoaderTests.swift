@@ -139,18 +139,29 @@ class RemoteFeedLoaderTests: XCTestCase {
         }
     }
     
-    private func expect(_ sut: RemoteFeedLoader, toCompleteWith result: RemoteFeedLoader.Result,  when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    private func expect(_ sut: RemoteFeedLoader, toCompleteWith expectedResult: RemoteFeedLoader.Result,  when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         //Act
-        var capturedResults = [RemoteFeedLoader.Result]()
-        sut.load { capturedResults.append($0) }
+        let exp = expectation(description: "Wait for load completion")
+        sut.load { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedItems), .success(exepectedItems)):
+                    //  It’s important to pass the file and line to the
+                    //  XCTAssert... functions when they are called outside
+                    //  the test method (e.g., in helper methods). This way,
+                    //  Xcode can highlight precisely which test failed, and where.
+                    //Assert
+                    XCTAssertEqual(receivedItems, exepectedItems, file: file, line: line)
+                case let (.failure(receivedError), .failure(exepectedError)):
+                    //Assert
+                    XCTAssertEqual(receivedError, exepectedError, file: file, line: line)
+                default:
+                     XCTFail("expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
+            }
+            exp.fulfill()
+        }
         action()
         
-        //  It’s important to pass the file and line to the
-        //  XCTAssert... functions when they are called outside
-        //  the test method (e.g., in helper methods). This way,
-        //  Xcode can highlight precisely which test failed, and where.
-        //Assert
-        XCTAssertEqual(capturedResults, [result], file: file, line: line)
+        wait(for: [exp], timeout: 1.0 )
     }
     
     private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedItem, json: [String: Any]) {
