@@ -11,27 +11,7 @@ import EssentialFeed
 final class EssentialFeedAPIEndToEndTests: XCTestCase {
     
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
-        // The URL used here redirects to another URL
-        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
-        
-        //Ephemeral - A session configuration that uses no persistent storage for caches, cookies, or credentials.
-        let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
-        
-        // The test URL used here doesn't redirects to another URL
-        //        let testServerURL = URL(string: "https://static1.squarespace.com/static/5891c5b8d1758ec68ef5dbc2/t/5c52cdd0b8a045df091d2fff/1548930512083/feed-case-study-test-api-feed.json")!
-        //        let client = URLSessionHTTPClient()
-        
-        let loader = RemoteFeedLoader(url: testServerURL, client: client)
-        let exp = expectation(description: "Wait for load completion")
-        var receivedResult: LoadFeedResult?
-        
-        loader.load { result in
-            receivedResult = result
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 5.0)
-        
-        switch receivedResult {
+        switch getFeedResult() {
             case let .success(items)?:
                 XCTAssertEqual(items.count, 8, "Expected 8 items in the test account feed")
                 XCTAssertEqual(items[0], expectedItem(at: 0))
@@ -56,6 +36,29 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
     
     // MARK: - Helpers
     
+    private func getFeedResult(file: StaticString = #filePath, line: UInt = #line) -> LoadFeedResult? {
+        // The URL used here redirects to another URL
+        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
+        
+        //Ephemeral - A session configuration that uses no persistent storage for caches, cookies, or credentials.
+        let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        
+        // The test URL used here doesn't redirects to another URL
+        //        let testServerURL = URL(string: "https://static1.squarespace.com/static/5891c5b8d1758ec68ef5dbc2/t/5c52cdd0b8a045df091d2fff/1548930512083/feed-case-study-test-api-feed.json")!
+        //        let client = URLSessionHTTPClient()
+        
+        let loader = RemoteFeedLoader(url: testServerURL, client: client)
+        let exp = expectation(description: "Wait for load completion")
+        var receivedResult: LoadFeedResult?
+        
+        loader.load { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 5.0)
+        return receivedResult
+    }
+      
     private func expectedItem (at index: Int) -> FeedItem {
         return FeedItem(id: id(at: index), description: description(at: index), location: location(at: index), imageURL: imageURL (at: index))
     }
