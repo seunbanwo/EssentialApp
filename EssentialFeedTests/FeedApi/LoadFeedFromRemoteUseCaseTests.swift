@@ -162,9 +162,9 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         wait(for: [exp], timeout: 1.0 )
     }
     
-    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedItem, json: [String: Any]) {
+    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
         // import FeedItem as testable or create initializer
-        let item = FeedItem(id: id, description: description, location: location, imageURL: imageURL)
+        let item = FeedImage(id: id, description: description, location: location, url: imageURL)
         
         // Since Swift 5, you can use the compactMapValues
         // method instead of reduce to remove nil values from a Dictionary
