@@ -29,6 +29,7 @@
 		EDDA1C342A24AB220073FE5D /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA1C332A24AB220073FE5D /* URLSessionHTTPClientTests.swift */; };
 		EDE8FFB42A272A77002D6541 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE8FFB32A272A77002D6541 /* URLSessionHTTPClient.swift */; };
 		EDE982952ADC5D4A00BF196E /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE982942ADC5D4A00BF196E /* LocalFeedLoader.swift */; };
+		EDF8FE4C2AE2328E00605C5C /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8FE4B2AE2328E00605C5C /* ValidateFeedCacheUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		EDDA1C332A24AB220073FE5D /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		EDE8FFB32A272A77002D6541 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		EDE982942ADC5D4A00BF196E /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
+		EDF8FE4B2AE2328E00605C5C /* ValidateFeedCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				ED739F5E2ADFAC4F0027275D /* Helpers */,
 				ED0FF2F52AA40C16006DB22F /* CacheFeedUseCaseTests.swift */,
 				ED739F5C2ADFAA9E0027275D /* LoadFeedFromCacheUseCaseTests.swift */,
+				EDF8FE4B2AE2328E00605C5C /* ValidateFeedCacheUseCaseTests.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF8FE4C2AE2328E00605C5C /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				ED3FD1232A267833006299CD /* XCTTestCase + MemoryLeakTracking.swift in Sources */,
 				143818B829A1F5FF005B41C9 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				ED739F602ADFAC6E0027275D /* FeedStoreSpy.swift in Sources */,
