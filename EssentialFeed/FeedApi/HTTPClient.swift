@@ -35,5 +35,8 @@ public protocol HTTPClient {
     // and open for extension
     
     // In protocol you dont have implementation just the definition
+    
+    /// The completion handler can be invoked in any thread.
+    /// Clients are responsible to dispatch to appropriate threads, if needed.
     func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)
 }
