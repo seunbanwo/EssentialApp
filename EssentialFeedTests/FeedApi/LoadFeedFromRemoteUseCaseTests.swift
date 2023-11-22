@@ -202,7 +202,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         
         // Make your class a subclass of the abstract class
         // use composition instead of inheritance
-        private var messages = [(url: URL, completion: (HTTPClientResult) -> Void)]()
+        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
         
         var requestedURLs: [URL] {
             return messages.map { $0.url }
@@ -211,7 +211,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         //  In Swift, closures are "first-class citizens."
         //  Meaning they can be stored as properties or
         //  passed as parameters, for example.
-        func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void) {
+        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
             messages.append((url, completion))
         }
         
@@ -222,7 +222,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         func complete(withStatusCode code: Int, data: Data, at index: Int = 0) {
             let response = HTTPURLResponse(url: requestedURLs[index], statusCode: code, httpVersion: nil, headerFields: nil)!
             
-            messages[index].completion(.success(data, response))
+            messages[index].completion(.success((data, response)))
         }
     }
 }
