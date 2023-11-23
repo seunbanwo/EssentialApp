@@ -1,0 +1,60 @@
+{
+  "configurations" : [
+    {
+      "id" : "8DB591B8-534C-4FAD-9147-4C3A6DF8C97B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:EssentialFeed.xcodeproj",
+          "identifier" : "1438189529A135C0005B41C9",
+          "name" : "EssentialFeed"
+        },
+        {
+          "containerPath" : "container:EssentialFeed.xcodeproj",
+          "identifier" : "ED0EDEBA2B0FB680004857B7",
+          "name" : "EssentialFeediOS"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random",
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeed.xcodeproj",
+        "identifier" : "1438189F29A135C0005B41C9",
+        "name" : "EssentialFeedTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeed.xcodeproj",
+        "identifier" : "ED555CD12A50045300447E9B",
+        "name" : "EssentialFeedEndToEndTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeed.xcodeproj",
+        "identifier" : "ED01EC772B01C5E900B405F4",
+        "name" : "EssentialFeedCacheIntegrationTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeed.xcodeproj",
+        "identifier" : "ED0EDEC12B0FB681004857B7",
+        "name" : "EssentialFeediOSTests"
+      }
+    }
+  ],
+  "version" : 1
+}
