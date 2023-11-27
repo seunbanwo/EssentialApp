@@ -62,6 +62,7 @@
 		EDFBE2582B15005500EFB793 /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2572B15005500EFB793 /* UIButton+TestHelpers.swift */; };
 		EDFBE25A2B1500F900EFB793 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2592B1500F900EFB793 /* UIControl+TestHelpers.swift */; };
 		EDFBE25D2B15051100EFB793 /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE25C2B15051100EFB793 /* FeedViewController+TestHelpers.swift */; };
+		EDFBE2602B150A7200EFB793 /* FeedImageCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE25F2B150A7200EFB793 /* FeedImageCell+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,7 @@
 		EDFBE2572B15005500EFB793 /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		EDFBE2592B1500F900EFB793 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		EDFBE25C2B15051100EFB793 /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
+		EDFBE25F2B150A7200EFB793 /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,8 +319,8 @@
 		ED0EDEC62B0FB681004857B7 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDFBE25B2B15036400EFB793 /* Controllers */,
 				EDFBE2522B14FE9500EFB793 /* Helpers */,
+				EDFBE25B2B15036400EFB793 /* Controllers */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -475,7 +477,6 @@
 				EDFBE2552B14FFF500EFB793 /* UIRefreshControl+TestHelpers.swift */,
 				EDFBE2572B15005500EFB793 /* UIButton+TestHelpers.swift */,
 				EDFBE2592B1500F900EFB793 /* UIControl+TestHelpers.swift */,
-				EDFBE25C2B15051100EFB793 /* FeedViewController+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -483,9 +484,19 @@
 		EDFBE25B2B15036400EFB793 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EDFBE25E2B150A5000EFB793 /* Helpers */,
 				EDFBE23F2B10409C00EFB793 /* FeedViewControllerTests.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EDFBE25E2B150A5000EFB793 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EDFBE25C2B15051100EFB793 /* FeedViewController+TestHelpers.swift */,
+				EDFBE25F2B150A7200EFB793 /* FeedImageCell+TestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -798,6 +809,7 @@
 				EDFBE25D2B15051100EFB793 /* FeedViewController+TestHelpers.swift in Sources */,
 				EDFBE2402B10409C00EFB793 /* FeedViewControllerTests.swift in Sources */,
 				EDFBE2542B14FEE100EFB793 /* UIImage+TestHelpers.swift in Sources */,
+				EDFBE2602B150A7200EFB793 /* FeedImageCell+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
