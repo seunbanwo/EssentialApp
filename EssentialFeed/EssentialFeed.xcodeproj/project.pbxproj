@@ -58,6 +58,7 @@
 		EDFBE24B2B107C8900EFB793 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE24A2B107C8900EFB793 /* FeedImageCell.swift */; };
 		EDFBE24D2B13186200EFB793 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE24C2B13186200EFB793 /* UIView+Shimmering.swift */; };
 		EDFBE2542B14FEE100EFB793 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2532B14FEE100EFB793 /* UIImage+TestHelpers.swift */; };
+		EDFBE2562B14FFF500EFB793 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2552B14FFF500EFB793 /* UIRefreshControl+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		EDFBE24A2B107C8900EFB793 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		EDFBE24C2B13186200EFB793 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		EDFBE2532B14FEE100EFB793 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
+		EDFBE2552B14FFF500EFB793 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				EDFBE2532B14FEE100EFB793 /* UIImage+TestHelpers.swift */,
+				EDFBE2552B14FFF500EFB793 /* UIRefreshControl+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDFBE2472B1048CF00EFB793 /* XCTTestCase + MemoryLeakTracking.swift in Sources */,
+				EDFBE2562B14FFF500EFB793 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				EDFBE2402B10409C00EFB793 /* FeedViewControllerTests.swift in Sources */,
 				EDFBE2542B14FEE100EFB793 /* UIImage+TestHelpers.swift in Sources */,
 			);
