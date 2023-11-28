@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				EDFBE2522B14FE9500EFB793 /* Helpers */,
-				EDFBE25B2B15036400EFB793 /* Controllers */,
+				EDFBE2652B1572A800EFB793 /* Feed UI */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -503,6 +503,14 @@
 				EDFBE2632B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EDFBE2652B1572A800EFB793 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				EDFBE25B2B15036400EFB793 /* Controllers */,
+			);
+			path = "Feed UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
