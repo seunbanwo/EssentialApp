@@ -65,6 +65,7 @@
 		EDFBE2602B150A7200EFB793 /* FeedImageCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE25F2B150A7200EFB793 /* FeedImageCell+TestHelpers.swift */; };
 		EDFBE2622B150DC600EFB793 /* FeedViewControllerTests+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2612B150DC600EFB793 /* FeedViewControllerTests+LoaderSpy.swift */; };
 		EDFBE2642B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2632B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift */; };
+		EDFBE2672B15741100EFB793 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2662B15741100EFB793 /* FeedImageDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,7 @@
 		EDFBE25F2B150A7200EFB793 /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		EDFBE2612B150DC600EFB793 /* FeedViewControllerTests+LoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+LoaderSpy.swift"; sourceTree = "<group>"; };
 		EDFBE2632B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Assertions.swift"; sourceTree = "<group>"; };
+		EDFBE2662B15741100EFB793 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,6 +446,7 @@
 		EDFBE24E2B14FD2400EFB793 /* Feed Image Loader */ = {
 			isa = PBXGroup;
 			children = (
+				EDFBE2662B15741100EFB793 /* FeedImageDataLoader.swift */,
 			);
 			path = "Feed Image Loader";
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFBE2672B15741100EFB793 /* FeedImageDataLoader.swift in Sources */,
 				EDFBE24D2B13186200EFB793 /* UIView+Shimmering.swift in Sources */,
 				EDFBE2492B10534300EFB793 /* FeedViewController.swift in Sources */,
 				EDFBE24B2B107C8900EFB793 /* FeedImageCell.swift in Sources */,
