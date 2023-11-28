@@ -71,6 +71,7 @@
 		EDFBE26E2B15830500EFB793 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE26D2B15830500EFB793 /* FeedUIComposer.swift */; };
 		EDFBE2712B159E5200EFB793 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2702B159E5200EFB793 /* FeedViewModel.swift */; };
 		EDFBE2732B15A5BD00EFB793 /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2722B15A5BD00EFB793 /* FeedImageViewModel.swift */; };
+		EDFBE2762B15BA4700EFB793 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2752B15BA4700EFB793 /* FeedPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,7 @@
 		EDFBE26D2B15830500EFB793 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		EDFBE2702B159E5200EFB793 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		EDFBE2722B15A5BD00EFB793 /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
+		EDFBE2752B15BA4700EFB793 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,6 +545,7 @@
 			children = (
 				EDFBE2722B15A5BD00EFB793 /* FeedImageViewModel.swift */,
 				EDFBE2702B159E5200EFB793 /* FeedViewModel.swift */,
+				EDFBE2752B15BA4700EFB793 /* FeedPresenter.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFBE2762B15BA4700EFB793 /* FeedPresenter.swift in Sources */,
 				EDFBE2672B15741100EFB793 /* FeedImageDataLoader.swift in Sources */,
 				EDFBE2692B15754100EFB793 /* FeedRefreshViewController.swift in Sources */,
 				EDFBE24D2B13186200EFB793 /* UIView+Shimmering.swift in Sources */,
