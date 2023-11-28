@@ -67,6 +67,7 @@
 		EDFBE2642B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2632B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift */; };
 		EDFBE2672B15741100EFB793 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2662B15741100EFB793 /* FeedImageDataLoader.swift */; };
 		EDFBE2692B15754100EFB793 /* FeedRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2682B15754100EFB793 /* FeedRefreshViewController.swift */; };
+		EDFBE26B2B157EBA00EFB793 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE26A2B157EBA00EFB793 /* FeedImageCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		EDFBE2632B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Assertions.swift"; sourceTree = "<group>"; };
 		EDFBE2662B15741100EFB793 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		EDFBE2682B15754100EFB793 /* FeedRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRefreshViewController.swift; sourceTree = "<group>"; };
+		EDFBE26A2B157EBA00EFB793 /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +469,7 @@
 			children = (
 				EDFBE2482B10534300EFB793 /* FeedViewController.swift */,
 				EDFBE2682B15754100EFB793 /* FeedRefreshViewController.swift */,
+				EDFBE26A2B157EBA00EFB793 /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				EDFBE24D2B13186200EFB793 /* UIView+Shimmering.swift in Sources */,
 				EDFBE2492B10534300EFB793 /* FeedViewController.swift in Sources */,
 				EDFBE24B2B107C8900EFB793 /* FeedImageCell.swift in Sources */,
+				EDFBE26B2B157EBA00EFB793 /* FeedImageCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
