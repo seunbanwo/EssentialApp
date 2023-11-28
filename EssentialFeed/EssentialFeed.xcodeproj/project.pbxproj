@@ -493,6 +493,7 @@
 				EDFBE2552B14FFF500EFB793 /* UIRefreshControl+TestHelpers.swift */,
 				EDFBE2572B15005500EFB793 /* UIButton+TestHelpers.swift */,
 				EDFBE2592B1500F900EFB793 /* UIControl+TestHelpers.swift */,
+				EDFBE25C2B15051100EFB793 /* FeedViewController+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
