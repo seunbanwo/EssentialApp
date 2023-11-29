@@ -208,6 +208,7 @@
 		EDFBE2872B17B52700EFB793 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
 		EDFBE28A2B17BA2100EFB793 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		EDFBE28C2B17BAEF00EFB793 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		EDFBE28D2B17BBDF00EFB793 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,6 +728,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = 1438188C29A135C0005B41C9;
 			productRefGroup = 1438189729A135C0005B41C9 /* Products */;
@@ -933,6 +935,7 @@
 			children = (
 				EDFBE28A2B17BA2100EFB793 /* en */,
 				EDFBE28C2B17BAEF00EFB793 /* pt-BR */,
+				EDFBE28D2B17BBDF00EFB793 /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
