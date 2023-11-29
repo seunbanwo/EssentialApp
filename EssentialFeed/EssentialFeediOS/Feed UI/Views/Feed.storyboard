@@ -130,6 +130,7 @@ Location</string>
                         <connections>
                             <outlet property="dataSource" destination="sna-TI-Zde" id="xm4-IQ-u4P"/>
                             <outlet property="delegate" destination="sna-TI-Zde" id="z9I-ik-8Ie"/>
+                            <outlet property="prefetchDataSource" destination="sna-TI-Zde" id="clP-z0-Itn"/>
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="mWH-fq-MDm">
