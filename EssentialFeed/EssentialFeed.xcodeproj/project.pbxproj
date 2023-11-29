@@ -77,8 +77,8 @@
 		EDFBE2802B16B44E00EFB793 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDFBE27F2B16B44E00EFB793 /* Feed.xcassets */; };
 		EDFBE2822B16C2EB00EFB793 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2812B16C2EB00EFB793 /* UITableView+Dequeueing.swift */; };
 		EDFBE2842B16C40800EFB793 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2832B16C40800EFB793 /* UIImageView+Animations.swift */; };
-		EDFBE2862B17B43700EFB793 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDFBE2852B17B43700EFB793 /* Feed.strings */; };
 		EDFBE2882B17B52700EFB793 /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2872B17B52700EFB793 /* FeedViewControllerTests+Localization.swift */; };
+		EDFBE2892B17BA2100EFB793 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDFBE28B2B17BA2100EFB793 /* Feed.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,8 +205,8 @@
 		EDFBE27F2B16B44E00EFB793 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		EDFBE2812B16C2EB00EFB793 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		EDFBE2832B16C40800EFB793 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
-		EDFBE2852B17B43700EFB793 /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Feed.strings; sourceTree = "<group>"; };
 		EDFBE2872B17B52700EFB793 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
+		EDFBE28A2B17BA2100EFB793 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -550,7 +550,7 @@
 				EDFBE2772B15C8EB00EFB793 /* FeedImagePresenter.swift */,
 				EDFBE2792B15CC5700EFB793 /* FeedViewModel.swift */,
 				EDFBE27B2B15CDC600EFB793 /* FeedLoadingViewModel.swift */,
-				EDFBE2852B17B43700EFB793 /* Feed.strings */,
+				EDFBE28B2B17BA2100EFB793 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -769,7 +769,7 @@
 			files = (
 				EDFBE27E2B16B37E00EFB793 /* Feed.storyboard in Resources */,
 				EDFBE2802B16B44E00EFB793 /* Feed.xcassets in Resources */,
-				EDFBE2862B17B43700EFB793 /* Feed.strings in Resources */,
+				EDFBE2892B17BA2100EFB793 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +924,17 @@
 			targetProxy = EDFBE2442B1046C600EFB793 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDFBE28B2B17BA2100EFB793 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDFBE28A2B17BA2100EFB793 /* en */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		143818A829A135C0005B41C9 /* Debug */ = {
