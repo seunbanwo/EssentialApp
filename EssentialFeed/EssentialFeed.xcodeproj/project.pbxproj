@@ -78,6 +78,7 @@
 		EDFBE2822B16C2EB00EFB793 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2812B16C2EB00EFB793 /* UITableView+Dequeueing.swift */; };
 		EDFBE2842B16C40800EFB793 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2832B16C40800EFB793 /* UIImageView+Animations.swift */; };
 		EDFBE2862B17B43700EFB793 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDFBE2852B17B43700EFB793 /* Feed.strings */; };
+		EDFBE2882B17B52700EFB793 /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2872B17B52700EFB793 /* FeedViewControllerTests+Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +206,7 @@
 		EDFBE2812B16C2EB00EFB793 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		EDFBE2832B16C40800EFB793 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		EDFBE2852B17B43700EFB793 /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Feed.strings; sourceTree = "<group>"; };
+		EDFBE2872B17B52700EFB793 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +537,7 @@
 				EDFBE25F2B150A7200EFB793 /* FeedImageCell+TestHelpers.swift */,
 				EDFBE2612B150DC600EFB793 /* FeedViewControllerTests+LoaderSpy.swift */,
 				EDFBE2632B15713C00EFB793 /* FeedViewControllerTests+Assertions.swift */,
+				EDFBE2872B17B52700EFB793 /* FeedViewControllerTests+Localization.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -894,6 +897,7 @@
 				EDFBE2402B10409C00EFB793 /* FeedViewControllerTests.swift in Sources */,
 				EDFBE2542B14FEE100EFB793 /* UIImage+TestHelpers.swift in Sources */,
 				EDFBE2602B150A7200EFB793 /* FeedImageCell+TestHelpers.swift in Sources */,
+				EDFBE2882B17B52700EFB793 /* FeedViewControllerTests+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
