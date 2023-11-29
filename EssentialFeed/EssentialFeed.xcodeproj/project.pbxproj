@@ -74,6 +74,8 @@
 		EDFBE2782B15C8EB00EFB793 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2772B15C8EB00EFB793 /* FeedImagePresenter.swift */; };
 		EDFBE27A2B15CC5700EFB793 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2792B15CC5700EFB793 /* FeedViewModel.swift */; };
 		EDFBE27C2B15CDC600EFB793 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE27B2B15CDC600EFB793 /* FeedLoadingViewModel.swift */; };
+		EDFBE27E2B16B37E00EFB793 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFBE27D2B16B37E00EFB793 /* Feed.storyboard */; };
+		EDFBE2802B16B44E00EFB793 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDFBE27F2B16B44E00EFB793 /* Feed.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +199,8 @@
 		EDFBE2772B15C8EB00EFB793 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		EDFBE2792B15CC5700EFB793 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		EDFBE27B2B15CDC600EFB793 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
+		EDFBE27D2B16B37E00EFB793 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		EDFBE27F2B16B44E00EFB793 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +497,8 @@
 			children = (
 				EDFBE24A2B107C8900EFB793 /* FeedImageCell.swift */,
 				EDFBE24C2B13186200EFB793 /* UIView+Shimmering.swift */,
+				EDFBE27D2B16B37E00EFB793 /* Feed.storyboard */,
+				EDFBE27F2B16B44E00EFB793 /* Feed.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -768,6 +774,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFBE27E2B16B37E00EFB793 /* Feed.storyboard in Resources */,
+				EDFBE2802B16B44E00EFB793 /* Feed.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
