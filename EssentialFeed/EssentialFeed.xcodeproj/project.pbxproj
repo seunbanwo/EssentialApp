@@ -81,6 +81,7 @@
 		EDFBE2892B17BA2100EFB793 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDFBE28B2B17BA2100EFB793 /* Feed.strings */; };
 		EDFBE2902B17BD1C00EFB793 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE28F2B17BD1C00EFB793 /* FeedLocalizationTests.swift */; };
 		EDFBE2922B18444000EFB793 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2912B18444000EFB793 /* MainQueueDispatchDecorator.swift */; };
+		EDFBE2942B1844CC00EFB793 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE2932B1844CC00EFB793 /* WeakRefVirtualProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +214,7 @@
 		EDFBE28D2B17BBDF00EFB793 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		EDFBE28F2B17BD1C00EFB793 /* FeedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLocalizationTests.swift; sourceTree = "<group>"; };
 		EDFBE2912B18444000EFB793 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		EDFBE2932B1844CC00EFB793 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,6 +548,7 @@
 			children = (
 				EDFBE26D2B15830500EFB793 /* FeedUIComposer.swift */,
 				EDFBE2912B18444000EFB793 /* MainQueueDispatchDecorator.swift */,
+				EDFBE2932B1844CC00EFB793 /* WeakRefVirtualProxy.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 				EDFBE2782B15C8EB00EFB793 /* FeedImagePresenter.swift in Sources */,
 				EDFBE27A2B15CC5700EFB793 /* FeedViewModel.swift in Sources */,
 				EDFBE2492B10534300EFB793 /* FeedViewController.swift in Sources */,
+				EDFBE2942B1844CC00EFB793 /* WeakRefVirtualProxy.swift in Sources */,
 				EDFBE2842B16C40800EFB793 /* UIImageView+Animations.swift in Sources */,
 				EDFBE2922B18444000EFB793 /* MainQueueDispatchDecorator.swift in Sources */,
 				EDFBE27C2B15CDC600EFB793 /* FeedLoadingViewModel.swift in Sources */,
