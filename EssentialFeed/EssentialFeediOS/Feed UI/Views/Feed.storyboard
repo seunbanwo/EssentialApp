@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,19 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="6QH-3n-OQY">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="6QH-3n-OQY" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <subviews>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3S-cd-ucX">
+                                    <rect key="frame" x="0.0" y="8" width="393" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="4UM-4D-OKe" appends="YES" id="K6a-rr-80Q"/>
+                                    </connections>
+                                </label>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="FhU-0i-g5v"/>
+                            <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="g3S-cd-ucX" firstAttribute="top" secondItem="6QH-3n-OQY" secondAttribute="top" constant="8" id="0W1-5u-ZJF"/>
+                                <constraint firstItem="g3S-cd-ucX" firstAttribute="leading" secondItem="6QH-3n-OQY" secondAttribute="leading" id="Mpr-B0-jdC"/>
+                                <constraint firstAttribute="bottom" secondItem="g3S-cd-ucX" secondAttribute="bottom" constant="8" id="b4H-JI-pOw"/>
+                                <constraint firstAttribute="trailing" secondItem="g3S-cd-ucX" secondAttribute="trailing" id="znu-e3-lur"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="g3S-cd-ucX" id="t7T-wv-dgu"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="TU7-CL-5Mq">
-                            <rect key="frame" x="0.0" y="674" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="692" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="mRI-Yl-8XQ" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="66" width="393" height="580"/>
+                                <rect key="frame" x="0.0" y="84" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mRI-Yl-8XQ" id="pJN-yM-X8b">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
@@ -151,8 +173,16 @@ Location</string>
                             <action selector="refresh" destination="sna-TI-Zde" eventType="valueChanged" id="9lc-z0-RES"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="errorView" destination="6QH-3n-OQY" id="Dep-NU-ypZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAp-dH-Lfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4UM-4D-OKe">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="6QH-3n-OQY" id="dRw-wS-LqD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="739.69465648854964" y="-27.464788732394368"/>
         </scene>
